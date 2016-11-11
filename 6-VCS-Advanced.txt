@@ -1,0 +1,109 @@
+Task 1
+
+git clone https://github.com/Sagotua/VCS-Advanced.git
+cd VCS-Advancedcd 
+git branch architecture
+git checkout architecture
+mkdir assets uploads
+echo "<h1>o, privet</h1>" > index.html
+git add .
+git commit -m "new index file"
+touch assets/all.js
+touch assets/css.js
+touch uploads/test.txt
+git status
+git add .
+git commit -m "new files"
+git push origin architecture
+touch .gitignore
+echo "/uploads/*" > .gitignore
+git status
+git add .
+git commit -m "add gitignore"
+git push origin architecture
+git checkout master
+git merge architecture
+git branch -d architecture
+git push origin :architecture
+
+
+Task 2
+
+git branch newBranch
+touch first.txt
+git add .
+git commit -m "first file"
+touch second.txt
+git add .
+git commit -m "second file"
+touch third.txt
+git add .
+git commit -m "third file"
+git checkout newBranch
+git rebase master
+touch test.txt
+git add .
+git commit -m "new test file newBranch"
+git merge master
+git checkout master
+gir merge newBranch
+git push
+git branch -d newBranch
+git push origin :newBranch
+
+
+Task 3
+
+touch version.txt
+git add .
+git commit -m "new file version"
+git tag -a v1.0 -m "test"
+git push origin master
+git push origin v1.0
+
+https://github.com/sagotua/VCS-Advanced/releases
+
+
+Task 4
+
+git submodule add https://github.com/sagotua/hello-world-git
+git add .
+git commit -m "submodule"
+git push
+ 
+
+Task 5
+
+git branch gh-pages
+git checkout gh-pages
+echo "<h1>one more file</h1>" > index.html
+git add .
+git commit -m "new index file"
+git push origin gh-pages
+     (https://sagotua.github.io/VCS-Advanced/ ----> one more file)
+echo "<h1>new test,new life</h1>" > index.html
+git add .
+git commit -m "new test index"
+git push origin gh-pages
+     (https://sagotua.github.io/VCS-Advanced/ ----> new test,new life)
+
+
+Task 6
+
+echo "fqweqwe" > file.txt
+git add .
+git commit -m "new file"
+git branch conflict
+git checkout conflict
+echo "jjjjwqe" > file.txt
+git add .
+git commit -m "changes in second file"
+git checkout master
+git merge conflict
+git merge --abort 
+     Don`t work
+git merge conflict
+     Fixing manualy
+git add .
+git commit -m "fixed conflict"
+git push
