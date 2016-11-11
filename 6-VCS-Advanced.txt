@@ -1,7 +1,7 @@
 Task 1
 
 git clone https://github.com/Sagotua/VCS-Advanced.git
-cd VCS-Advancedcd 
+cd VCS-Advanced 
 git branch architecture
 git checkout architecture
 mkdir assets uploads
