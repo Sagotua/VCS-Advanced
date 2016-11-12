@@ -57,6 +57,9 @@ Task 3
 touch version.txt
 git add .
 git commit -m "new file version"
+touch version2.txt
+git add .
+git commit -m "second file version"
 git tag -a v1.0 -m "test"
 git push origin master
 git push origin v1.0
