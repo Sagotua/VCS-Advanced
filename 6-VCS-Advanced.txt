@@ -44,7 +44,6 @@ git rebase master
 touch test.txt
 git add .
 git commit -m "new test file newBranch"
-git merge master
 git checkout master
 gir merge newBranch
 git push
